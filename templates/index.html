@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Hotel Reservation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hotel Reservation</h1>
+        <form action="/reserve" method="POST">
+            <input type="text" name="guest_name" placeholder="Guest Name" required>
+            <input type="number" name="room_number" placeholder="Room Number" required>
+
+            <label>Check-in</label>
+            <input type="date" name="check_in" required>
+
+            <label>Check-out</label>
+            <input type="date" name="check_out" required>
+
+            <button type="submit">Reserve</button>
+        </form>
+    </div>
+</body>
+</html>
